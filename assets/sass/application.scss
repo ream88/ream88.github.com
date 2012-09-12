@@ -3,28 +3,51 @@ $blue: #3c89c3;
 @import 'normalize';
 @import 'fonts/bariol';
 
+@import 'modular-scale';
 @import 'compass/typography/vertical_rhythm';
 
-$base-font-size: 32px;
-$base-line-height: 48px;
+$base-font-size: 24px;
+$base-line-height: 40px;
+$base-size: $base-font-size;
+
+$mobile-font-size: 32px;
+$mobile-line-height: 48px;
+$mobile-size: $mobile-font-size;
 
 @include establish-baseline;
 
-body {  
+@mixin phones {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  
   background: $blue;
   font-family: 'Bariol', sans-serif;
+  font-size: ms(0);
+  
+  @include phones {
+    font-size: ms(0, $mobile-font-size);
+  }
 }
 
 section {
-  margin: $base-font-size;
+  margin: ms(0);
+  
+  @include phones {
+    margin: ms(0, $mobile-size);
+  }
   
   p {
     margin: 0;
     padding: 0;
     width: 60%;
     
-    @media only screen and (max-device-width: 767px) {
-      width: 100% !important;
+    @include phones {
+      width: 100%;
     }
     
     a {
@@ -35,11 +58,15 @@ section {
   
   h1 {
     font-weight: normal;
-    font-size: 48px;
+    font-size: ms(1);
     color: white;
     margin: 0;
-    padding: 0;
-  }
-  
+    padding: ms(-2) 0;
+    
+    @include phones {
+      font-size: ms(1, $mobile-font-size);
+      padding: ms(-2, $mobile-font-size) 0;
 
+    }
+  }
 }
