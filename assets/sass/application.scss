@@ -1,6 +1,45 @@
 $blue: #3c89c3;
 
+@import 'normalize';
+@import 'fonts/bariol';
 
-body {
+@import 'compass/typography/vertical_rhythm';
+
+$base-font-size: 32px;
+$base-line-height: 48px;
+
+@include establish-baseline;
+
+body {  
   background: $blue;
+  font-family: 'Bariol', sans-serif;
+}
+
+section {
+  margin: $base-font-size;
+  
+  p {
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    
+    @media only screen and (max-device-width: 767px) {
+      width: 100% !important;
+    }
+    
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  
+  h1 {
+    font-weight: normal;
+    font-size: 48px;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+
 }
