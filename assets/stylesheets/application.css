@@ -464,7 +464,12 @@ footer {
       section p a:focus,
       footer p a:hover,
       footer p a:focus {
-        color: #1e4462; }
+        text-shadow: 0 0 5px white, 0 3px 5px rgba(255, 255, 255, 0.3), 3px 0 5px rgba(255, 255, 255, 0.3), 0 -3px 5px rgba(255, 255, 255, 0.3), -3px 0px 5px rgba(255, 255, 255, 0.3); }
+      header p a:active,
+      section p a:active,
+      footer p a:active {
+        position: relative;
+        top: 1px; }
   header h1,
   section h1,
   footer h1 {

@@ -5,7 +5,7 @@ $blue: #3c89c3;
 @import 'fonts/ss-social';
 
 @import 'modular-scale';
-@import 'compass/typography/vertical_rhythm';
+@import 'compass';
 
 $base-font-size: 24px;
 $base-line-height: 40px;
@@ -33,6 +33,8 @@ body {
   @include phones {
     font-size: ms(0, $mobile-font-size);
   }
+  
+  
 }
 
 header,
@@ -59,7 +61,12 @@ footer {
 
       &:hover,
       &:focus {
-        color: darken($blue, 25%);
+        @include text-shadow(0 0 5px white, 0 3px 5px rgba(white, 0.3), 3px 0 5px rgba(white, 0.3), 0 -3px 5px rgba(white, 0.3), -3px 0px 5px rgba(white, 0.3));
+      }
+
+      &:active {
+        position: relative;
+        top: 1px;
       }
     }
   }
