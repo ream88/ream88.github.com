@@ -23,18 +23,27 @@ $mobile-size: $mobile-font-size;
   }
 }
 
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
 body {
   -webkit-font-smoothing: antialiased;
 
-  background: $blue;
+  background-color: $blue;
+  background-image: url('../images/jkvhcq9.png');
   font-family: 'Bariol', sans-serif;
   font-size: ms(0);
 
   @include phones {
     font-size: ms(0, $mobile-font-size);
   }
-  
-  
+
+  @include retina {
+    background-size: 50%;
+  }
 }
 
 header,

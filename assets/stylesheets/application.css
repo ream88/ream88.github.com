@@ -427,12 +427,16 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: #3c89c3;
+  background-color: #3c89c3;
+  background-image: url("../images/jkvhcq9.png");
   font-family: 'Bariol', sans-serif;
   font-size: 24px; }
   @media only screen and (max-width: 767px) {
     body {
       font-size: 32px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+      background-size: 50%; } }
 
 header,
 section,
