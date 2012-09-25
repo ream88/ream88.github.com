@@ -23,26 +23,31 @@ $mobile-size: $mobile-font-size;
   }
 }
 
-@mixin retina {
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    @content;
+@mixin retina-background-image($url, $retina_url: false) {
+  background-image: image-url($url);
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+         only screen and (min-device-pixel-ratio: 1.3),
+         only screen and (min-resolution: 120dpi) {
+    @if $retina_url == false {
+      background-size: image-width($url) / 2 image-height($url) / 2;
+    } @else {
+      background-image: image-url($retina_url);
+    }
   }
 }
 
 body {
   -webkit-font-smoothing: antialiased;
 
+  @include retina-background-image('../images/jkvhcq9.png');
+
   background-color: $blue;
-  background-image: url('../images/jkvhcq9.png');
   font-family: 'Bariol', sans-serif;
   font-size: ms(0);
 
   @include phones {
     font-size: ms(0, $mobile-font-size);
-  }
-
-  @include retina {
-    background-size: 50%;
   }
 }
 
