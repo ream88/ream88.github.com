@@ -24,7 +24,7 @@ $mobile-size: $mobile-font-size;
 }
 
 @mixin retina-background-image($url, $retina_url: false) {
-  background-image: image-url($url);
+  background-image: url($url);
 
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
          only screen and (min-device-pixel-ratio: 1.3),
@@ -32,7 +32,7 @@ $mobile-size: $mobile-font-size;
     @if $retina_url == false {
       background-size: image-width($url) / 2 image-height($url) / 2;
     } @else {
-      background-image: image-url($retina_url);
+      background-image: url($retina_url);
     }
   }
 }
