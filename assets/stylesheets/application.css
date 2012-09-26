@@ -494,11 +494,11 @@ html {
   background-color: #458cc3;
   background-image: url("../images/noise.png");
   background-size: 100px 100px;
-  -webkit-animation: rainbow 5s infinite;
-  -moz-animation: rainbow 5s infinite;
-  -ms-animation: rainbow 5s infinite;
-  -o-animation: rainbow 5s infinite;
-  animation: rainbow 5s infinite; }
+  -webkit-animation: rainbow 300s infinite;
+  -moz-animation: rainbow 300s infinite;
+  -ms-animation: rainbow 300s infinite;
+  -o-animation: rainbow 300s infinite;
+  animation: rainbow 300s infinite; }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
     html {
       background-image: url("../images/noise@2x.png"); } }
