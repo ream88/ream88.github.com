@@ -497,7 +497,8 @@ html {
   -moz-animation: rainbow 300s infinite;
   -ms-animation: rainbow 300s infinite;
   -o-animation: rainbow 300s infinite;
-  animation: rainbow 300s infinite; }
+  animation: rainbow 300s infinite;
+  background-size: 100px 100px !important; }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
     html {
       background-size: 50px 50px !important; } }
