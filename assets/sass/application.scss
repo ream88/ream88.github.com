@@ -7,6 +7,8 @@ $blue: #3c89c3;
 @import 'modular-scale';
 @import 'compass';
 
+@import 'noise';
+
 $base-font-size: 24px;
 $base-line-height: 40px;
 $base-size: $base-font-size;
@@ -23,26 +25,20 @@ $mobile-size: $mobile-font-size;
   }
 }
 
-@mixin retina-background-image($url, $retina_url: false) {
-  background-image: url($url);
+html {
+  background-color: $blue;
+  @include background($noise, $blue);
 
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
          only screen and (min-device-pixel-ratio: 1.3),
          only screen and (min-resolution: 120dpi) {
-    @if $retina_url == false {
-      background-size: image-width($url) / 2 image-height($url) / 2;
-    } @else {
-      background-image: url($retina_url);
-    }
+    background-size: 50px 50px;
   }
 }
 
 body {
   -webkit-font-smoothing: antialiased;
 
-  @include retina-background-image('../images/jkvhcq9.png');
-
-  background-color: $blue;
   font-family: 'Bariol', sans-serif;
   font-size: ms(0);
 
