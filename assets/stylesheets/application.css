@@ -427,132 +427,72 @@ html {
 
 @-moz-keyframes rainbow {
   0%, 20% {
-    background: url("../images/noise.png"), #458cc3; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      0%, 20% {
-        background: url("../images/noise@2x.png"), #458cc3; } }
+    background-color: #458cc3; }
 
   25%, 45% {
-    background: url("../images/noise.png"), #44db4e; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      25%, 45% {
-        background: url("../images/noise@2x.png"), #44db4e; } }
+    background-color: #44db4e; }
 
   50%, 70% {
-    background: url("../images/noise.png"), #ff544f; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      50%, 70% {
-        background: url("../images/noise@2x.png"), #ff544f; } }
+    background-color: #ff544f; }
 
   75%, 95% {
-    background: url("../images/noise.png"), #ffb44f; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      75%, 95% {
-        background: url("../images/noise@2x.png"), #ffb44f; } } }
+    background-color: #ffb44f; } }
 
 @-webkit-keyframes rainbow {
   0%, 20% {
-    background: url("../images/noise.png"), #458cc3; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      0%, 20% {
-        background: url("../images/noise@2x.png"), #458cc3; } }
+    background-color: #458cc3; }
 
   25%, 45% {
-    background: url("../images/noise.png"), #44db4e; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      25%, 45% {
-        background: url("../images/noise@2x.png"), #44db4e; } }
+    background-color: #44db4e; }
 
   50%, 70% {
-    background: url("../images/noise.png"), #ff544f; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      50%, 70% {
-        background: url("../images/noise@2x.png"), #ff544f; } }
+    background-color: #ff544f; }
 
   75%, 95% {
-    background: url("../images/noise.png"), #ffb44f; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      75%, 95% {
-        background: url("../images/noise@2x.png"), #ffb44f; } } }
+    background-color: #ffb44f; } }
 
 @-o-keyframes rainbow {
   0%, 20% {
-    background: url("../images/noise.png"), #458cc3; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      0%, 20% {
-        background: url("../images/noise@2x.png"), #458cc3; } }
+    background-color: #458cc3; }
 
   25%, 45% {
-    background: url("../images/noise.png"), #44db4e; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      25%, 45% {
-        background: url("../images/noise@2x.png"), #44db4e; } }
+    background-color: #44db4e; }
 
   50%, 70% {
-    background: url("../images/noise.png"), #ff544f; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      50%, 70% {
-        background: url("../images/noise@2x.png"), #ff544f; } }
+    background-color: #ff544f; }
 
   75%, 95% {
-    background: url("../images/noise.png"), #ffb44f; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      75%, 95% {
-        background: url("../images/noise@2x.png"), #ffb44f; } } }
+    background-color: #ffb44f; } }
 
 @-ms-keyframes rainbow {
   0%, 20% {
-    background: url("../images/noise.png"), #458cc3; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      0%, 20% {
-        background: url("../images/noise@2x.png"), #458cc3; } }
+    background-color: #458cc3; }
 
   25%, 45% {
-    background: url("../images/noise.png"), #44db4e; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      25%, 45% {
-        background: url("../images/noise@2x.png"), #44db4e; } }
+    background-color: #44db4e; }
 
   50%, 70% {
-    background: url("../images/noise.png"), #ff544f; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      50%, 70% {
-        background: url("../images/noise@2x.png"), #ff544f; } }
+    background-color: #ff544f; }
 
   75%, 95% {
-    background: url("../images/noise.png"), #ffb44f; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      75%, 95% {
-        background: url("../images/noise@2x.png"), #ffb44f; } } }
+    background-color: #ffb44f; } }
 
 @keyframes rainbow {
   0%, 20% {
-    background: url("../images/noise.png"), #458cc3; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      0%, 20% {
-        background: url("../images/noise@2x.png"), #458cc3; } }
+    background-color: #458cc3; }
 
   25%, 45% {
-    background: url("../images/noise.png"), #44db4e; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      25%, 45% {
-        background: url("../images/noise@2x.png"), #44db4e; } }
+    background-color: #44db4e; }
 
   50%, 70% {
-    background: url("../images/noise.png"), #ff544f; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      50%, 70% {
-        background: url("../images/noise@2x.png"), #ff544f; } }
+    background-color: #ff544f; }
 
   75%, 95% {
-    background: url("../images/noise.png"), #ffb44f; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
-      75%, 95% {
-        background: url("../images/noise@2x.png"), #ffb44f; } } }
+    background-color: #ffb44f; } }
 
 html {
   background-color: #458cc3;
-  background: url("../images/noise.png"), #458cc3;
+  background-image: url("../images/noise.png");
   background-size: 100px 100px;
   -webkit-animation: rainbow 5s infinite;
   -moz-animation: rainbow 5s infinite;
@@ -561,7 +501,7 @@ html {
   animation: rainbow 5s infinite; }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
     html {
-      background: url("../images/noise@2x.png"), #458cc3; } }
+      background-image: url("../images/noise@2x.png"); } }
 
 body {
   -webkit-font-smoothing: antialiased;
