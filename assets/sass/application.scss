@@ -26,35 +26,38 @@ $mobile-size: $mobile-font-size;
   }
 }
 
+@mixin retina-background-noise($color, $url, $retina-url) {
+  @include background($url, $color);
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+         only screen and (min-device-pixel-ratio: 1.3),
+         only screen and (min-resolution: 120dpi) {
+    @include background($retina-url, $color);
+  }
+}
+
 @include keyframes(rainbow) {
   0%, 20% {
-    @include background(url('../images/noise.png'), $blue);
+    @include retina-background-noise($blue, url('../images/noise.png'), url('../images/noise@2x.png'));
   }
 
   25%, 45% {
-    @include background(url('../images/noise.png'), #44db4e);
+    @include retina-background-noise(#44db4e, url('../images/noise.png'), url('../images/noise@2x.png'));
   }
 
   50%, 70% {
-    @include background(url('../images/noise.png'), #ff544f);
+    @include retina-background-noise(#ff544f, url('../images/noise.png'), url('../images/noise@2x.png'));
   }
 
   75%, 95% {
-    @include background(url('../images/noise.png'), #ffb44f);
+    @include retina-background-noise(#ffb44f, url('../images/noise.png'), url('../images/noise@2x.png'));
   }
 }
 
 html {
   background-color: $blue;
-  @include background(url('../images/noise.png'), $blue);
-  @include animation(rainbow 60s * 5 infinite);
-  background-size: 100px 100px;
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
-         only screen and (min-device-pixel-ratio: 1.3),
-         only screen and (min-resolution: 120dpi) {
-    background-size: 50px 50px, auto;
-  }
+  @include retina-background-noise($blue, url('../images/noise.png'), url('../images/noise@2x.png'));
+  //@include animation(rainbow 60s * 5 infinite);
 }
 
 body {
