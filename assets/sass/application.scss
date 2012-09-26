@@ -57,6 +57,7 @@ $mobile-size: $mobile-font-size;
 html {
   background-color: $blue;
   @include retina-background-noise($blue, url('../images/noise.png'), url('../images/noise@2x.png'));
+  background-size: 100px 100px;
   //@include animation(rainbow 60s * 5 infinite);
 }
 
