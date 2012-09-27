@@ -425,6 +425,11 @@ html {
   font-size: 24px;
   line-height: 1.66667em; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html {
   background-color: #666666;
   min-height: 100%;
@@ -439,7 +444,8 @@ body {
   padding: 39px; }
   @media only screen and (max-width: 767px) {
     body {
-      font-size: 32px; } }
+      font-size: 24px;
+      padding: 24px; } }
 
 #background {
   -webkit-transition: opacity 0.5s ease-in-out;
@@ -448,10 +454,14 @@ body {
   transition: opacity 0.5s ease-in-out;
   -webkit-backface-visibility: hidden;
   opacity: 0;
-  -webkit-filter: blur(10px);
-  background-position: 50% 50%;
-  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  -webkit-filter: blur(10px);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: none;
   height: 100%;
   left: 0;
   position: absolute;
@@ -471,13 +481,14 @@ article {
   position: relative; }
   @media only screen and (max-width: 767px) {
     article {
-      width: 100%; } }
+      width: 100%;
+      padding: 9px 15px; } }
 
 @media only screen and (max-width: 767px) {
   header,
   section,
   footer {
-    margin: 32px; } }
+    margin: 24px; } }
 header p, header aside,
 section p,
 section aside,
@@ -521,8 +532,8 @@ footer h1 {
     header h1,
     section h1,
     footer h1 {
-      font-size: 52px;
-      padding: 12px 0; } }
+      font-size: 39px;
+      padding: 9px 0; } }
 
 footer p a {
   margin-right: 9px; }

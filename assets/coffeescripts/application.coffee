@@ -33,7 +33,7 @@ $ ->
       fakeImg.load ->
         background = $ '<div>', id: 'background'
         
-        $('body').prepend background.css(background: "url(#{photo.source})")
+        $('body').prepend background.css('background-image': "url(#{photo.source})")
         setTimeout ->
           background.addClass('loaded')
           $('footer aside').addClass('loaded')

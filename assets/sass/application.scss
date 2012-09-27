@@ -9,8 +9,8 @@ $base-font-size: 24px;
 $base-line-height: 40px;
 $base-size: $base-font-size;
 
-$mobile-font-size: 32px;
-$mobile-line-height: 48px;
+$mobile-font-size: $base-font-size;
+$mobile-line-height: $base-line-height;
 $mobile-size: $mobile-font-size;
 
 @include establish-baseline;
@@ -32,6 +32,10 @@ $mobile-size: $mobile-font-size;
   }
 }
 
+* {
+  @include box-sizing(border-box);
+}
+
 html {
   background-color: #666666;
   min-height: 100%;
@@ -48,16 +52,18 @@ body {
 
   @include phones {
     font-size: ms(0, $mobile-font-size);
+    padding: ms(0);
   }
 }
 
 #background {
   @include load;
+  @include background-size(cover);
 
   -webkit-filter: blur(10px);
-  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-position: center center;
   background-repeat: none;
-  background-size: cover;
   height: 100%;
   left: 0;
   position: absolute;
@@ -75,7 +81,8 @@ article {
   position: relative;
 
   @include phones {
-     width: 100%;
+    width: 100%;
+    padding: ms(-2) ms(-1);
   }
 }
 
@@ -83,7 +90,7 @@ header,
 section,
 footer {
   @include phones {
-    margin: ms(0, $mobile-size);
+    margin: ms(0);
   }
 
   p, aside {

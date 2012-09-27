@@ -39,7 +39,7 @@
             id: 'background'
           });
           $('body').prepend(background.css({
-            background: "url(" + photo.source + ")"
+            'background-image': "url(" + photo.source + ")"
           }));
           return setTimeout(function() {
             background.addClass('loaded');
