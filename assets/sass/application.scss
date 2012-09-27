@@ -1,4 +1,4 @@
-$blue: #458cc3;
+$blue: white;
 
 @import 'normalize';
 @import 'fonts/bariol';
@@ -6,9 +6,6 @@ $blue: #458cc3;
 
 @import 'modular-scale';
 @import 'compass';
-
-@import 'noise';
-@import 'animation';
 
 $base-font-size: 24px;
 $base-line-height: 40px;
@@ -36,29 +33,11 @@ $mobile-size: $mobile-font-size;
   }
 }
 
-@include keyframes(rainbow) {
-  0%, 20% {
-    background-color: $blue;
-  }
-
-  25%, 45% {
-    background-color: #44db4e;
-  }
-
-  50%, 70% {
-    background-color: #ff544f;
-  }
-
-  75%, 95% {
-    background-color: #ffb44f;
-  }
-}
-
 html {
-  background-color: $blue;
-  @include retina-background-noise(url('../images/noise.png'), url('../images/noise@2x.png'));
-  background-size: 100px 100px;
-  @include animation(rainbow 60s * 5 infinite);
+  background-color: #666;
+  min-height: 100%;
+
+  @include box-shadow(inset 0 0 ms(2) black);
 }
 
 body {
