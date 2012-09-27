@@ -36,6 +36,7 @@ $ ->
         $('body').prepend background.css(background: "url(#{photo.source})")
         setTimeout ->
           background.addClass('loaded')
+          $('footer aside').addClass('loaded')
         , 1
       
       $('body').append fakeImg.hide()

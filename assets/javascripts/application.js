@@ -42,7 +42,8 @@
             background: "url(" + photo.source + ")"
           }));
           return setTimeout(function() {
-            return background.addClass('loaded');
+            background.addClass('loaded');
+            return $('footer aside').addClass('loaded');
           }, 1);
         });
         return $('body').append(fakeImg.hide());

@@ -447,13 +447,13 @@ body {
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
   -webkit-backface-visibility: hidden;
+  opacity: 0;
   -webkit-filter: blur(10px);
   background-position: 50% 50%;
   background-repeat: none;
   background-size: cover;
   height: 100%;
   left: 0;
-  opacity: 0;
   position: absolute;
   top: 0;
   width: 100%; }
@@ -527,8 +527,16 @@ footer h1 {
 footer p a {
   margin-right: 9px; }
 footer aside {
-  position: absolute;
-  text-align: right;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  opacity: 0;
   bottom: 6px;
+  font-size: 12px;
+  position: absolute;
   right: 24px;
-  font-size: 12px; }
+  text-align: right; }
+  footer aside.loaded {
+    opacity: 1; }

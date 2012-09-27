@@ -21,6 +21,17 @@ $mobile-size: $mobile-font-size;
   }
 }
 
+@mixin load {
+  @include transition(opacity 0.5s ease-in-out);
+
+  -webkit-backface-visibility: hidden;
+  opacity: 0;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
 html {
   background-color: #666666;
   min-height: 100%;
@@ -41,23 +52,17 @@ body {
 }
 
 #background {
-  @include transition(opacity 0.5s ease-in-out);
+  @include load;
 
-  -webkit-backface-visibility: hidden;
   -webkit-filter: blur(10px);
   background-position: 50% 50%;
   background-repeat: none;
   background-size: cover;
   height: 100%;
   left: 0;
-  opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
-
-  &.loaded {
-    opacity: 1;
-  }
 }
 
 article {
@@ -125,10 +130,12 @@ footer {
   }
 
   aside {
-    position: absolute;
-    text-align: right;
+    @include load;
+
     bottom: ms(-3);
-    right: ms(0);
     font-size: ms(-1.5);
+    position: absolute;
+    right: ms(0);
+    text-align: right;
   }
 }
