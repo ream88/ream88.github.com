@@ -1,5 +1,3 @@
-$blue: white;
-
 @import 'normalize';
 @import 'fonts/bariol';
 @import 'fonts/ss-social';
@@ -23,18 +21,8 @@ $mobile-size: $mobile-font-size;
   }
 }
 
-@mixin retina-background-noise($url, $retina-url) {
-  @include background-image($url);
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
-         only screen and (min-device-pixel-ratio: 1.3),
-         only screen and (min-resolution: 120dpi) {
-    @include background-image($retina-url);
-  }
-}
-
 html {
-  background-color: #666;
+  background-color: #666666;
   min-height: 100%;
 
   @include box-shadow(inset 0 0 ms(2) black);
@@ -45,29 +33,57 @@ body {
 
   font-family: 'Bariol', sans-serif;
   font-size: ms(0);
+  padding: ms(1);
 
   @include phones {
     font-size: ms(0, $mobile-font-size);
   }
 }
 
+#background {
+  @include transition(opacity 0.5s ease-in-out);
+
+  -webkit-backface-visibility: hidden;
+  -webkit-filter: blur(10px);
+  background-position: 50% 50%;
+  background-repeat: none;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+article {
+  @include box-shadow(0 0 3px white, 0 0 10px rgba(black, 0.1));
+
+  background: rgba(white, 0.33);
+  border-radius: ms(-3);
+  padding: ms(0) ms(1);
+  width: 61.8%;
+  position: relative;
+
+  @include phones {
+     width: 100%;
+  }
+}
+
 header,
 section,
 footer {
-  margin: ms(0);
-
   @include phones {
     margin: ms(0, $mobile-size);
   }
 
-  p {
-    margin: 0;
+  p, aside {
     padding: 0;
-    width: 60%;
-
-    @include phones {
-      width: 100%;
-    }
+    width: 100%;
 
     a {
       color: white;
@@ -106,5 +122,13 @@ footer {
 
       margin-right: ms(-2);
     }
+  }
+
+  aside {
+    position: absolute;
+    text-align: right;
+    bottom: ms(-3);
+    right: ms(0);
+    font-size: ms(-1.5);
   }
 }
