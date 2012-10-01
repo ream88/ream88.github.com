@@ -6,13 +6,13 @@
   window._gaq = [['_setAccount', googleAnalyticsID], ['_trackPageview']];
 
   $(function() {
-    var base_params, base_uri, params;
+    var base_uri, default_params, params;
     base_uri = 'http://api.flickr.com/services/rest';
-    base_params = {
+    default_params = {
       api_key: '1d73ab087336342b9684547967c62f3d',
       nojsoncallback: '1'
     };
-    params = $.extend(base_params, {
+    params = $.extend(default_params, {
       format: 'json',
       media: 'photos',
       method: 'flickr.photosets.getPhotos',
@@ -22,7 +22,7 @@
       var photo, photos;
       photos = response.photoset.photo;
       photo = photos[Math.floor(Math.random() * photos.length)];
-      params = $.extend(base_params, {
+      params = $.extend(default_params, {
         method: 'flickr.photos.getSizes',
         photo_id: photo.id
       });
@@ -33,7 +33,7 @@
         fakeImg = $('<img>', {
           src: photo.source
         });
-        fakeImg.load(function() {
+        return fakeImg.load(function() {
           var background;
           background = $('<div>', {
             id: 'background'
@@ -46,7 +46,6 @@
             return $('footer aside').addClass('loaded');
           }, 1);
         });
-        return $('body').append(fakeImg.hide());
       });
     });
   });
