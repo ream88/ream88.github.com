@@ -431,11 +431,11 @@ html {
   box-sizing: border-box; }
 
 html {
-  background-color: #666666;
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 63px black;
-  -moz-box-shadow: inset 0 0 63px black;
-  box-shadow: inset 0 0 63px black; }
+  background-image: url("../images/light_wool.png");
+  color: #333; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
+    html {
+      background-image: url("../images/light_wool@2x.png"); } }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -447,42 +447,12 @@ body {
       font-size: 24px;
       padding: 24px; } }
 
-#background {
-  -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  -o-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-  -webkit-backface-visibility: hidden;
-  opacity: 0;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-filter: blur(10px);
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: none;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%; }
-  #background.loaded {
-    opacity: 1; }
-
 article {
-  -webkit-box-shadow: 0 0 3px white, 0 0 10px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0 3px white, 0 0 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 3px white, 0 0 10px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.33);
-  border-radius: 6px;
-  padding: 24px 39px;
   width: 61.8%;
   position: relative; }
   @media only screen and (max-width: 767px) {
     article {
-      width: 100%;
-      padding: 9px 15px; } }
+      width: 100%; } }
 
 @media only screen and (max-width: 767px) {
   header,
@@ -501,7 +471,7 @@ footer aside {
   section aside a,
   footer p a,
   footer aside a {
-    color: white;
+    color: #333333;
     text-decoration: none; }
     header p a:hover, header p a:focus, header aside a:hover, header aside a:focus,
     section p a:hover,
@@ -512,7 +482,12 @@ footer aside {
     footer p a:focus,
     footer aside a:hover,
     footer aside a:focus {
-      text-shadow: 0 0 5px white, 0 3px 5px rgba(255, 255, 255, 0.3), 3px 0 5px rgba(255, 255, 255, 0.3), 0 -3px 5px rgba(255, 255, 255, 0.3), -3px 0px 5px rgba(255, 255, 255, 0.3); }
+      -webkit-transition: color 0.2 ease-in-out;
+      -moz-transition: color 0.2 ease-in-out;
+      -o-transition: color 0.2 ease-in-out;
+      transition: color 0.2 ease-in-out;
+      color: #333333;
+      text-shadow: 0 0 0px #77cf21, 0 1px 2px #77cf21, 1px 0 2px #77cf21, 0 -1px 2px #77cf21, -1px 0 2px #77cf21; }
     header p a:active, header aside a:active,
     section p a:active,
     section aside a:active,
@@ -523,7 +498,7 @@ footer aside {
 header h1,
 section h1,
 footer h1 {
-  color: white;
+  color: #77cf21;
   font-size: 39px;
   font-weight: normal;
   margin: 0;
@@ -537,17 +512,3 @@ footer h1 {
 
 footer p a {
   margin-right: 9px; }
-footer aside {
-  -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  -o-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-  -webkit-backface-visibility: hidden;
-  opacity: 0;
-  bottom: 6px;
-  font-size: 12px;
-  position: absolute;
-  right: 24px;
-  text-align: right; }
-  footer aside.loaded {
-    opacity: 1; }
