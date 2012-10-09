@@ -43,8 +43,9 @@ $mobile-size: $mobile-font-size;
 }
 
 html {
-  @include retina-background-image('../images/light_wool.png', '../images/light_wool@2x.png');
+  @include retina-background-image('../images/light_wool.png', '../images/light_wool_@2X.png');
 
+  background-size: 190px 191px;
   color: #333;
 }
 
