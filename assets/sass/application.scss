@@ -34,6 +34,7 @@ $mobile-size: $mobile-font-size;
       background-size: image-width($url) / 2 image-height($url) / 2;
     } @else {
       background-image: url($retina_url);
+      background-size: image-width($url) image-height($url);
     }
   }
 }
