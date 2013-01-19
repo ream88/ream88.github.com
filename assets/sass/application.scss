@@ -46,7 +46,7 @@ body {
   font-size: ms(0);
 
   @include phones {
-    padding: ms(0);
+    padding: 0;
 
     font-size: ms(0, $mobile-font-size);
   }
@@ -91,7 +91,7 @@ p, aside {
 
   a {
     color: $text-color;
-    text-decoration: none;
+    text-decoration: underline;
 
     &:hover,
     &:focus {
@@ -121,4 +121,6 @@ footer a {
   @extend .ss-icon;
 
   margin-right: ms(-2);
+
+  text-decoration: none;
 }
