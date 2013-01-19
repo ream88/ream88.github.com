@@ -1,12 +1,15 @@
 @import 'normalize';
-@import 'fonts/bariol';
-@import 'fonts/ss-social';
-
 @import 'modular-scale';
 @import 'compass';
 
-$color: #77CF21;
-$textColor: #333;
+@import 'phones';
+@import 'retina-background-image';
+
+@import 'fonts/bariol';
+@import 'fonts/ss-social';
+
+$green: #77cf21;
+$text-color: #333333;
 
 $base-font-size: 24px;
 $base-line-height: 40px;
@@ -16,55 +19,42 @@ $mobile-font-size: $base-font-size;
 $mobile-line-height: $base-line-height;
 $mobile-size: $mobile-font-size;
 
+
+
 @include establish-baseline;
-
-@mixin phones {
-  @media only screen and (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin retina-background-image($url, $retina_url: false) {
-  background-image: url($url);
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
-         only screen and (min-device-pixel-ratio: 1.3),
-         only screen and (min-resolution: 120dpi) {
-    @if $retina_url == false {
-      background-size: image-width($url) / 2 image-height($url) / 2;
-    } @else {
-      background-image: url($retina_url);
-      background-size: image-width($url) image-height($url);
-    }
-  }
-}
 
 * {
   @include box-sizing(border-box);
 }
 
 html {
-  @include retina-background-image('../images/light_wool.png', '../images/light_wool_@2X.png');
+  $background-image: 'light_wool.png';
+  $retina-background-image: 'light_wool_@2X.png';
 
-  background-size: 190px 191px;
+  @include retina-background-image($background-image, $retina-background-image);
+
+  background-size: image-width($background-image) image-height($background-image);
   color: #333;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
 
-  font-family: 'Bariol', sans-serif;
-  font-size: ms(0);
   padding: ms(1);
 
+  font-family: 'Bariol', sans-serif;
+  font-size: ms(0);
+
   @include phones {
-    font-size: ms(0, $mobile-font-size);
     padding: ms(0);
+
+    font-size: ms(0, $mobile-font-size);
   }
 }
 
 article {
   width: 61.8%;
+
   position: relative;
 
   @include phones {
@@ -78,58 +68,57 @@ footer {
   @include phones {
     margin: ms(0);
   }
+}
 
-  p, aside {
-    padding: 0;
-    width: 100%;
+h1 {
+  margin: 0;
+  padding: ms(-2) 0;
 
-    a {
-      color: $textColor;
-      text-decoration: none;
+  color: $green;
+  font-size: ms(1);
+  font-weight: normal;
 
-      &:hover,
-      &:focus {
-        @include transition(color 0.2 ease-in-out);
-        color: $textColor;
-        
-        $width: 1px;
-        $blur: 2px;
-        
-        @include text-shadow(
-          0 0 $blur - 2 $color,
-          0 $width $blur rgba($color, 1),
-          $width 0 $blur rgba($color, 1),
-          0 $width * -1 $blur rgba($color, 1),
-          $width * -1 0 $blur rgba($color, 1));
-      }
+  @include phones {
+    padding: ms(-2, $mobile-font-size) 0;
 
-      &:active {
-        position: relative;
-        top: 1px;
-      }
-    }
+    font-size: ms(1, $mobile-font-size);
   }
+}
 
-  h1 {
-    color: $color;
-    font-size: ms(1);
-    font-weight: normal;
-    margin: 0;
-    padding: ms(-2) 0;
+p, aside {
+  padding: 0;
+  width: 100%;
 
-    @include phones {
-      font-size: ms(1, $mobile-font-size);
-      padding: ms(-2, $mobile-font-size) 0;
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      $width: 1px;
+      $blur: 2px;
+
+      @include text-shadow(
+        0 0 $blur - 2 $green,
+        0 $width $blur rgba($green, 1),
+        $width 0 $blur rgba($green, 1),
+        0 $width * -1 $blur rgba($green, 1),
+        $width * -1 0 $blur rgba($green, 1));
+      @include transition(color 0.2 ease-in-out);
+
+      color: $text-color;
+    }
+
+    &:active {
+      top: 1px;
+
+      position: relative;
     }
   }
 }
 
-footer {
-  p {
-    a {
-      @extend .ss-icon;
+footer a {
+  @extend .ss-icon;
 
-      margin-right: ms(-2);
-    }
-  }
+  margin-right: ms(-2);
 }

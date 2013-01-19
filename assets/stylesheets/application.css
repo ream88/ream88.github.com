@@ -192,7 +192,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -337,11 +337,11 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.ss-icon, footer p a, [class^="ss-"]:before, [class*=" ss-"]:before,
+.ss-icon, footer a, [class^="ss-"]:before, [class*=" ss-"]:before,
 .ss-icon.ss-social-circle,
-footer p a.ss-social-circle, [class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before,
+footer a.ss-social-circle, [class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before,
 .ss-icon.ss-social,
-footer p a.ss-social, [class^="ss-"].ss-social:before, [class*=" ss-"].ss-social:before {
+footer a.ss-social, [class^="ss-"].ss-social:before, [class*=" ss-"].ss-social:before {
   font-family: "SSSocial";
   font-style: normal;
   font-weight: normal;
@@ -355,7 +355,7 @@ footer p a.ss-social, [class^="ss-"].ss-social:before, [class*=" ss-"].ss-social
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig"; }
 
-.ss-icon.ss-social-circle, footer p a.ss-social-circle, [class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before {
+.ss-icon.ss-social-circle, footer a.ss-social-circle, [class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before {
   font-weight: bold; }
 
 .ss-facebook:before {
@@ -431,23 +431,23 @@ html {
   box-sizing: border-box; }
 
 html {
-  background-image: url("../images/light_wool.png");
+  background-image: url('/assets/images/light_wool.png?1349429768');
   background-size: 190px 191px;
   color: #333; }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 120dpi) {
     html {
-      background-image: url("../images/light_wool_@2X.png");
+      background-image: url('/assets/images/light_wool_@2X.png?1349429768');
       background-size: 190px 191px; } }
 
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: 'Bariol', sans-serif;
-  font-size: 24px;
-  padding: 39px; }
+  padding: 39px;
+  font-family: "Bariol", sans-serif;
+  font-size: 24px; }
   @media only screen and (max-width: 767px) {
     body {
-      font-size: 24px;
-      padding: 24px; } }
+      padding: 24px;
+      font-size: 24px; } }
 
 article {
   width: 61.8%;
@@ -461,56 +461,34 @@ article {
   section,
   footer {
     margin: 24px; } }
-header p, header aside,
-section p,
-section aside,
-footer p,
-footer aside {
+
+h1 {
+  margin: 0;
+  padding: 9px 0;
+  color: #77cf21;
+  font-size: 39px;
+  font-weight: normal; }
+  @media only screen and (max-width: 767px) {
+    h1 {
+      padding: 9px 0;
+      font-size: 39px; } }
+
+p, aside {
   padding: 0;
   width: 100%; }
-  header p a, header aside a,
-  section p a,
-  section aside a,
-  footer p a,
-  footer aside a {
+  p a, aside a {
     color: #333333;
     text-decoration: none; }
-    header p a:hover, header p a:focus, header aside a:hover, header aside a:focus,
-    section p a:hover,
-    section p a:focus,
-    section aside a:hover,
-    section aside a:focus,
-    footer p a:hover,
-    footer p a:focus,
-    footer aside a:hover,
-    footer aside a:focus {
+    p a:hover, p a:focus, aside a:hover, aside a:focus {
+      text-shadow: 0 0 0px #77cf21, 0 1px 2px #77cf21, 1px 0 2px #77cf21, 0 -1px 2px #77cf21, -1px 0 2px #77cf21;
       -webkit-transition: color 0.2 ease-in-out;
       -moz-transition: color 0.2 ease-in-out;
       -o-transition: color 0.2 ease-in-out;
       transition: color 0.2 ease-in-out;
-      color: #333333;
-      text-shadow: 0 0 0px #77cf21, 0 1px 2px #77cf21, 1px 0 2px #77cf21, 0 -1px 2px #77cf21, -1px 0 2px #77cf21; }
-    header p a:active, header aside a:active,
-    section p a:active,
-    section aside a:active,
-    footer p a:active,
-    footer aside a:active {
-      position: relative;
-      top: 1px; }
-header h1,
-section h1,
-footer h1 {
-  color: #77cf21;
-  font-size: 39px;
-  font-weight: normal;
-  margin: 0;
-  padding: 9px 0; }
-  @media only screen and (max-width: 767px) {
-    header h1,
-    section h1,
-    footer h1 {
-      font-size: 39px;
-      padding: 9px 0; } }
+      color: #333333; }
+    p a:active, aside a:active {
+      top: 1px;
+      position: relative; }
 
-footer p a {
+footer a {
   margin-right: 9px; }
