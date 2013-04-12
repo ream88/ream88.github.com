@@ -1,4 +1,5 @@
-ruby '1.8.7'
-source :rubygems
+ruby '1.9.3'
+source 'https://rubygems.org'
 
+gem 'compass'
 gem 'modular-scale'

@@ -3,13 +3,13 @@
 @import 'compass';
 
 @import 'phones';
-@import 'retina-background-image';
 
 @import 'fonts/bariol';
 @import 'fonts/ss-social';
 
-$green: #77cf21;
-$text-color: #333333;
+$white: #f9f9f9;
+$green: #27ae60;
+$text-color: #34495e;
 
 $base-font-size: 24px;
 $base-line-height: 40px;
@@ -28,13 +28,8 @@ $mobile-size: $mobile-font-size;
 }
 
 html {
-  $background-image: 'light_wool.png';
-  $retina-background-image: 'light_wool_@2X.png';
-
-  @include retina-background-image($background-image, $retina-background-image);
-
-  background-size: image-width($background-image) image-height($background-image);
-  color: #333;
+  background-color: $white;
+  color: $text-color;
 }
 
 body {
@@ -90,23 +85,12 @@ p, aside {
   width: 100%;
 
   a {
-    color: $text-color;
+    color: $green;
     text-decoration: underline;
 
     &:hover,
     &:focus {
-      $width: 1px;
-      $blur: 2px;
-
-      @include text-shadow(
-        0 0 $blur - 2 $green,
-        0 $width $blur rgba($green, 1),
-        $width 0 $blur rgba($green, 1),
-        0 $width * -1 $blur rgba($green, 1),
-        $width * -1 0 $blur rgba($green, 1));
-      @include transition(color 0.2 ease-in-out);
-
-      color: $text-color;
+      text-decoration: none;
     }
 
     &:active {
