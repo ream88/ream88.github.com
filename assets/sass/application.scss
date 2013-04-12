@@ -4,6 +4,7 @@
 
 @import 'phones';
 
+@import 'fonts/bariol';
 @import 'fonts/ss-social';
 
 $white: #f9f9f9;
@@ -36,9 +37,8 @@ body {
 
   padding: ms(1);
 
-  font-family: 'Lato', sans-serif;
+  font-family: 'Bariol', sans-serif;
   font-size: ms(0);
-  font-weight: 300;
 
   @include phones {
     padding: 0;
@@ -71,7 +71,7 @@ h1 {
 
   color: $green;
   font-size: ms(1);
-  font-weight: 300;
+  font-weight: normal;
 
   @include phones {
     padding: ms(-2, $mobile-font-size) 0;
