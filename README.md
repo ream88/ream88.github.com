@@ -1,18 +1,20 @@
 # mariouher.com
 
-Hey, you found it. (Achievement unlocked!) The source of my personal site at [mariouher.com](http://mariouher.com).
+![](https://www.evernote.com/shard/s42/sh/7b580d7f-928d-4bc9-bc92-472235974f2a/dfa5367cab300f27cb4e47fa47a9ad8a/res/697dc207-a782-49d1-bc80-25ef3d71fb67/skitch.png?resizeSmall&width=832)
+
+Hey, you found the source of my personal site at [mariouher.com](http://mariouher.com).
 
 ## Assets
 
 * **[Bariol](http://www.bariol.com)** - Just an awesome font, love it so much.
 * **[SS Social](http://symbolset.com)** - Icons retina ready!
-* **Pattern** - from [BgPatterns](http://bgpatterns.com)
+* Colors from [Flat UI](http://designmodo.github.io/Flat-UI/)
 
 ## Copyright
 
 (The MIT license)
 
-Copyright (c) 2012 Mario Uher
+Copyright (c) 2012-2013 Mario Uher
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
