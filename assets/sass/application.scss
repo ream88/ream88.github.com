@@ -28,22 +28,24 @@ $mobile-size: $mobile-font-size;
 }
 
 %wooble {
-  @include perspective(400px);
-  @include perspective-origin(50% 50%);
+  .no-touch & {
+    @include perspective(400px);
+    @include perspective-origin(50% 50%);
 
-  display: inline-block;
+    display: inline-block;
 
-  span {
-    @include transform-origin(50% 0%);
-    @include transform-style(preserve-3d);
-    @include transition(all 0.2s ease);
+    span {
+      @include transform-origin(50% 0%);
+      @include transform-style(preserve-3d);
+      @include transition(all 0.2s ease);
 
-    display: block;
-    position: relative;
+      display: block;
+      position: relative;
 
-    &:hover,
-    &:focus {
-      @include transform(translate3d(0px, 0px, 150px));
+      &:hover,
+      &:focus {
+        @include transform(translate3d(0px, 0px, 150px));
+      }
     }
   }
 }
