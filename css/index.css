@@ -1,0 +1,90 @@
+html {
+  font-size: 1.5em;
+}
+
+body {
+  height: 100%;
+  background: url('../images/trianglify.svg') rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  background-attachment: fixed;
+  font-family: Lato;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgb(0,0,0);
+}
+
+a, a:active, a:hover {
+  color: white;
+}
+
+footer {
+  float: left;
+  clear: both;
+  width: 80%;
+  height: 0.958rem;
+  margin: 1.75rem 0 0 10%;
+}
+
+h1 {
+  display: inline-block;
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 1.75rem;
+  font-size: 2em;
+  line-height: 1.38;
+  color: rgb(255, 255, 255);
+}
+
+header {
+  float: left;
+  width: 59.5833333333%;
+  height: 6.25rem;
+  margin: 4.458rem 0 0 10%;
+}
+
+img {
+  display: block;
+  float: left;
+  width: 1.167rem;
+  height: auto;
+  overflow: hidden;
+}
+
+section {
+  display: inline-block;
+  float: left;
+  clear: both;
+  width: 59.5833333333%;
+  margin: 1.708rem 0 0 10%;
+  font-size: 1em;
+  color: rgb(0,0,0);
+}
+
+section p {
+  margin-bottom: 1em;
+}
+
+.hi {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  font-size: 1em;
+  color: rgb(0,0,0);
+}
+
+.mail {
+  margin-left: 5.625%;
+}
+
+@media(max-width: 750px) {
+  footer img {
+    height: auto;
+  }
+
+  section {
+    width: 80%;
+  }
+}

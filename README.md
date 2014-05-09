@@ -1,14 +1,10 @@
-# mariouher.com
-
-![](https://www.evernote.com/shard/s42/sh/7b580d7f-928d-4bc9-bc92-472235974f2a/dfa5367cab300f27cb4e47fa47a9ad8a/res/697dc207-a782-49d1-bc80-25ef3d71fb67/skitch.png?resizeSmall&width=832)
-
 Hey, you found the source of my personal site at [mariouher.com](http://mariouher.com).
 
-## Assets
+## Assets used:
 
-* **[Bariol](http://www.bariol.com)** - Just an awesome font, love it so much.
-* **[SS Social](http://symbolset.com)** - Icons retina ready!
-* Colors from [Flat UI](http://designmodo.github.io/Flat-UI/)
+* **[Lato](https://www.google.com/fonts/specimen/Lato)**
+* **[Ligature Symbols](http://kudakurage.com/ligature_symbols/)**
+* **[Trianglify](http://qrohlf.com/trianglify/)**
 
 ## Copyright
 
