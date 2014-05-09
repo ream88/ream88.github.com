@@ -80,10 +80,20 @@ section p {
 }
 
 @media(max-width: 750px) {
+  footer {
+    padding-bottom: 4.167rem;
+  }
+
   footer img {
     height: auto;
   }
 
+  .header .hi,
+  header h1 {
+    width: 134.1666666666%;
+  }
+
+  header,
   section {
     width: 80%;
   }
