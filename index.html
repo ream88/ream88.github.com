@@ -7,6 +7,7 @@
   <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/spaced-out.css">
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -19,13 +20,31 @@
   </script>
 </head>
 <body>
-  <header>
-    <p>Hi, my name is</p>
-    <h1>Mario Uher</h1>
-  </header>
-  <main>
-    <p>I'm a 26-year old Rails developer from Linz, Austria.</p>
-    <p>When sitting in front of my Mac, I usually craft apps for <a href="http://beenetwork.eu" target="_blank">beenetwork</a>, hack my own stuff and play games. From time to time I also post interesting stuff on my <a href="http://tumblr.mariouher.com" target="_blank">Tumblr</a>.</p>
-  </main>
+
+  <div class="so-page-wrapper">
+    <aside class="so-page-menu">
+      <nav class="so-menu-content">
+        <p><a href="https://twitter.com/ream88" target="_blank">Twitter</a></p>
+        <p><a href="https://github.com/haihappen" target="_blank">GitHub</a></p>
+        <p><a href="http://tumblr.mariouher.com" target="_blank">Tumblr</a></p>
+      </nav>
+    </aside>
+
+    <div class="so-content-overlay"></div>
+
+    <main class="so-content">
+      <header class="so-menu-toggle">
+        <p>Hi, my name is</p>
+        <h1><a href="javascript:return false;">Mario Uher</a></h1>
+      </header>
+      <article>
+        <p>I'm a 26-year old Rails developer from Linz, Austria.</p>
+        <p>When sitting in front of my Mac, I usually craft apps for <a href="http://beenetwork.eu" target="_blank">beenetwork</a>, hack my own stuff and play games. From time to time I also post interesting stuff on my <a href="http://tumblr.mariouher.com" target="_blank">Tumblr</a>.</p>
+      </article>
+    </main>
+  </div>
+
+  <script src="js/spaced-out.js"></script>
+  <script>SpacedOutMenu.install();</script>
 </body>
 </html>
