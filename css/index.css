@@ -58,6 +58,7 @@ header {
 
 article {
   margin: 1.7rem 10% 0 10%;
+  max-width: 30.495rem;
 }
 
 article p {
