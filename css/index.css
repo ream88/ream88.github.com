@@ -62,5 +62,6 @@ article {
 }
 
 article p {
+  line-height: 1.618;
   margin-bottom: 1em;
 }
