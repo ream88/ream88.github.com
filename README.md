@@ -10,7 +10,7 @@ Hey, you found the source of my personal site at [mariouher.com](http://mariouhe
 
 (The MIT license)
 
-Copyright (c) 2012-2014 Mario Uher
+Copyright (c) 2012-2015 Mario Uher
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
