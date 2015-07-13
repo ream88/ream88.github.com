@@ -1,0 +1,10 @@
+.CommandLine {
+  flex: 1;
+
+  align-self: flex-end;
+}
+
+
+.Prompt {
+  margin-right: 5px;
+}

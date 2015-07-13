@@ -1,11 +1,3 @@
-Hey, you found the source of my personal site at [mariouher.com](http://mariouher.com).
-
-## Assets used:
-
-* **[Lato](https://www.google.com/fonts/specimen/Lato)**
-* **[Ligature Symbols](http://kudakurage.com/ligature_symbols/)**
-* **[Trianglify](http://qrohlf.com/trianglify/)**
-
 ## Copyright
 
 (The MIT license)

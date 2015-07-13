@@ -1,0 +1,13 @@
+:root {
+  --color: #0062b3;
+}
+
+.Command a {
+  color: var(--color);
+}
+
+.Command a:hover {
+  background-color: var(--color);
+  color: white;
+  text-decoration: none;
+}

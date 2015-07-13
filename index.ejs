@@ -16,7 +16,9 @@
   </script>
 </head>
 <body>
-  <main class="index__App___2JKfj" data-reactid=".25wcntuo1kw" data-react-checksum="828715337"><div class="index__CommandLine___16CHw" data-reactid=".25wcntuo1kw.0"></div></main>
-  <script src="bundle.js"></script>
+  <%- html %>
+<% for (var chunk in assets) { -%>
+  <script src="<%= assets[chunk] %>"></script>
+<% } -%>
 </body>
 </html>
