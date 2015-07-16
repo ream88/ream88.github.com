@@ -5,10 +5,10 @@ import CommandLine from '../CommandLine';
 import Command from '../Command';
 
 
-export default class App extends Component {
+export default class Terminal extends Component {
   render() {
     return (
-      <main className={styles.App}>
+      <main className={styles.Terminal}>
         <CommandLine prompt="~#">
           <Command command="whoami">
             Mario Uher
@@ -27,4 +27,9 @@ export default class App extends Component {
       </main>
     );
   }
+}
+
+
+if (typeof document !== 'undefined') {
+  React.render(<Terminal />, document.body);
 }

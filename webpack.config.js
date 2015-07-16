@@ -8,11 +8,11 @@ var fs = require('fs');
 
 
 module.exports = {
-  entry: './index.js',
+  entry: './components/Terminal/index.js',
 
   output: {
     path: __dirname,
-    filename: 'bundle.js',
+    filename: 'index.js',
     libraryTarget: 'umd'
   },
 
@@ -31,7 +31,7 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin('style.css', { allChunks: true }),
-    new ReactToHtmlPlugin('index.html', 'bundle.js', {
+    new ReactToHtmlPlugin('index.html', 'index.js', {
       template: ejs.compile(fs.readFileSync(__dirname + '/index.ejs', 'utf-8'))
     })
   ]
