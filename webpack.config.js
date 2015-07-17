@@ -26,6 +26,7 @@ module.exports = {
   postcss: [
     require('autoprefixer-core'),
     require('postcss-calc'),
+    require('postcss-color-function'),
     require('postcss-custom-properties')
   ],
 
