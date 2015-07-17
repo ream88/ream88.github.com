@@ -46,9 +46,9 @@ export default class CommandLine extends Component {
     const prompt = this.renderPrompt();
     const commands = this.renderCommands();
 
-    // Convert given [commands, commands] to [prompt, command, prompt, command, ...]
+    // Convert given [commands, commands] to [prompt, command, br, prompt, command, br, ...]
     const children = commands
-      .map((command) => [prompt, command])
+      .map((command) => [prompt, command, <br />])
       .reduce((a, b) => a.concat(b), []);
 
     return (
@@ -63,7 +63,6 @@ export default class CommandLine extends Component {
   renderPrompt() {
     return (
       <span className={styles.Prompt}>
-        <br />
         {this.props.prompt}
       </span>
     );
