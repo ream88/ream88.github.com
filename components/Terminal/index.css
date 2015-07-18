@@ -35,4 +35,5 @@ body:global {
   font-family: Menlo, Monaco, 'Source Code Pro', monospace;
   font-size: 11px;
   line-height: 1.1rem;
+  -webkit-backdrop-filter: blur(10px);
 }
