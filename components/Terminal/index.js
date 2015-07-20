@@ -8,7 +8,7 @@ import Command from '../Command';
 export default class Terminal extends Component {
   render() {
     return (
-      <main className={styles.Terminal}>
+      <main>
         <CommandLine prompt="~#">
           <Command command="whoami">
             Mario Uher
