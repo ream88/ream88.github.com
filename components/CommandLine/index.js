@@ -64,6 +64,7 @@ export default class CommandLine extends Component {
     return (
       <span className={styles.Prompt}>
         {this.props.prompt}
+        &nbsp;
       </span>
     );
   }

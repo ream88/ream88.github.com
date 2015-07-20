@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "ejs": "^2.3.3",
+    "postcss-custom-media": "^4.1.0",
     "react": "^0.13.3"
   }
 }

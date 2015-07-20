@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+@custom-media --iphone (max-width: 736px);
 
 
 *:global {
@@ -11,29 +11,34 @@
 
 body:global {
   height: 100vh;
+  margin: 0.5rem;
   width: 100vw;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
-}
-
-
-.Terminal {
-  height: 40vh;
-  min-width: 20rem;
-  padding: 5px;
-  width: 30vw;
-
-  overflow-y: auto;
 
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background-color: color(black alpha(80%));
   color: white;
-  font-family: Menlo, Monaco, 'Source Code Pro', monospace;
-  font-size: 11px;
-  line-height: 1.1rem;
-  -webkit-backdrop-filter: blur(10px);
+  font-family: Menlo, monospace;
+  font-size: 8pt;
+  line-height: 1.5em;
+}
+
+
+@media (--iphone) {
+  body:global {
+    font-size: 20pt;
+  }
+}
+
+
+.Terminal {
+  height: 100vh;
+  width: 100vw;
+
+  overflow-y: auto;
 }

@@ -27,7 +27,8 @@ module.exports = {
     require('autoprefixer-core'),
     require('postcss-calc'),
     require('postcss-color-function'),
-    require('postcss-custom-properties')
+    require('postcss-custom-properties'),
+    require('postcss-custom-media')
   ],
 
   plugins: [

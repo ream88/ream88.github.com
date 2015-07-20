@@ -1,11 +1,16 @@
+:root {
+  --turquoise: #1BACC1;
+}
+
+
 .Command a {
-  color: white;
+  color: var(--turquoise);
   font-weight: bold;
   text-decoration: none;
 }
 
 .Command a:hover {
+  background-color: var(--turquoise);
   color: white;
   font-weight: bold;
-  text-decoration: underline;
 }
