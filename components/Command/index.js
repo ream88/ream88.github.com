@@ -52,7 +52,7 @@ export default class Command extends Component {
     return (
       <span className={styles.Command}>
         {this.state.command}
-        {this.state.complete ? [<br />, this.props.children] : <Cursor />}
+        {this.state.complete ? [<br key="br" />, this.props.children] : <Cursor />}
       </span>
     );
   }

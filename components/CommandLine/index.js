@@ -48,7 +48,7 @@ export default class CommandLine extends Component {
 
     // Convert given [commands, commands] to [prompt, command, br, prompt, command, br, ...]
     const children = commands
-      .map((command) => [prompt, command, <br />])
+      .map((command, index) => [cloneWithProps(prompt, { key: `prompt-${index}` }), command, <br key={'br-' + index} />])
       .reduce((a, b) => a.concat(b), []);
 
     return (
