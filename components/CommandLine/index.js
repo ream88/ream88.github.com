@@ -15,6 +15,7 @@ export default class CommandLine extends Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
       complete: false,
       children: []
@@ -46,7 +47,7 @@ export default class CommandLine extends Component {
     const prompt = this.renderPrompt();
     const commands = this.renderCommands();
 
-    // Convert given [commands, commands] to [prompt, command, br, prompt, command, br, ...]
+    // Convert given [command, command] to [prompt, command, br, prompt, command, br, ...]
     const children = commands
       .map((command, index) => [cloneWithProps(prompt, { key: `prompt-${index}` }), command, <br key={'br-' + index} />])
       .reduce((a, b) => a.concat(b), []);
