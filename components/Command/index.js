@@ -1,16 +1,17 @@
-import styles from './index.css'
-import React, { PropTypes, Component } from 'react';
-import Cursor from '../Cursor';
+import styles from "./index.css";
+import React, { PropTypes, Component } from "react";
+import Cursor from "../Cursor";
 
 
 export default class Command extends Component {
   static propTypes = {
-    command:  PropTypes.string.isRequired,
-    children: PropTypes.oneOfType([
+    children:   PropTypes.oneOfType([
       PropTypes.element,
       PropTypes.arrayOf(PropTypes.element),
       PropTypes.string
-    ])
+    ]),
+    command:    PropTypes.string.isRequired,
+    onComplete: PropTypes.func
   }
 
 
@@ -19,18 +20,18 @@ export default class Command extends Component {
 
     this.state = {
       complete: false,
-      command: ''
-    }
+      command: ""
+    };
+  }
+
+
+  componentDidMount() {
+    setTimeout(this.tick.bind(this), this.randomTimeout() + 1000);
   }
 
 
   randomTimeout() {
     return Math.round(Math.random() * (100 - 30));
-  }
-
-
-  componentDidMount() {
-    setTimeout(this.tick.bind(this), this.randomTimeout() + 1000)
   }
 
 

@@ -1,15 +1,15 @@
-import styles from './index.css';
+import styles from "./index.css";
 
-import React, { PropTypes, Component } from 'react';
-import { addons } from 'react/addons';
+import React, { PropTypes, Component } from "react";
+import { addons } from "react/addons";
 const { cloneWithProps } = addons;
-import Cursor from '../Cursor';
+import Cursor from "../Cursor";
 
 
 export default class CommandLine extends Component {
   static propTypes = {
-    prompt:   PropTypes.string.isRequired,
-    children: PropTypes.arrayOf(PropTypes.element).isRequired
+    children: PropTypes.arrayOf(PropTypes.element).isRequired,
+    prompt:   PropTypes.string.isRequired
   }
 
 
@@ -19,7 +19,12 @@ export default class CommandLine extends Component {
     this.state = {
       complete: false,
       children: []
-    }
+    };
+  }
+
+
+  componentDidMount() {
+    this.next();
   }
 
 
@@ -33,31 +38,8 @@ export default class CommandLine extends Component {
       this.setState({
         ...this.state,
         complete: true
-      })
+      });
     }
-  }
-
-
-  componentDidMount() {
-    this.next();
-  }
-
-
-  render() {
-    const prompt = this.renderPrompt();
-    const commands = this.renderCommands();
-
-    // Convert given [command, command] to [prompt, command, br, prompt, command, br, ...]
-    const children = commands
-      .map((command, index) => [cloneWithProps(prompt, { key: `prompt-${index}` }), command, <br key={'br-' + index} />])
-      .reduce((a, b) => a.concat(b), []);
-
-    return (
-      <div className={styles.CommandLine}>
-        {children}
-        {this.state.complete ? [prompt, <Cursor />] : null}
-      </div>
-    );
   }
 
 
@@ -74,6 +56,24 @@ export default class CommandLine extends Component {
   renderCommands() {
     return this.state.children.map((child) =>
       cloneWithProps(child, { key: child.props.command, onComplete: this.next.bind(this) })
+    );
+  }
+
+
+  render() {
+    const prompt = this.renderPrompt();
+    const commands = this.renderCommands();
+
+    // Convert given [command, command] to [prompt, command, br, prompt, command, br, ...]
+    const children = commands
+      .map((command, index) => [cloneWithProps(prompt, { key: `prompt-${index}` }), command, <br key={"br-" + index} />])
+      .reduce((a, b) => a.concat(b), []);
+
+    return (
+      <div className={styles.CommandLine}>
+        {children}
+        {this.state.complete ? [prompt, <Cursor />] : null}
+      </div>
     );
   }
 }

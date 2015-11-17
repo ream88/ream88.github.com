@@ -1,1 +1,69 @@
-*{margin:0;padding:0;box-sizing:border-box}body{margin:.5rem;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background-color:rgba(0,0,0,.8);color:#fff;font-family:Menlo,monospace;font-size:8pt;line-height:1.5em}@media (max-width:736px){body{font-size:20pt}}.index__CommandLine___16CHw{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}.index__Cursor___1T-Dy{border-left:1px solid;-webkit-animation:index__blink___xEjVI .7s infinite;animation:index__blink___xEjVI .7s infinite;opacity:1}@-webkit-keyframes index__blink___xEjVI{0%{opacity:1}50%{opacity:0}}@keyframes index__blink___xEjVI{0%,to{opacity:1}50%{opacity:0}to{opacity:1}}.index__Command___1SySu a{color:#1bacc1;font-weight:700;text-decoration:none}.index__Command___1SySu a:hover{background-color:#1bacc1;color:#fff;font-weight:700}
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0.5rem;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: Menlo, monospace;
+  font-size: 8pt;
+  line-height: 1.5em;
+}
+
+
+@media (max-width: 736px) {
+  body {
+    font-size: 20pt;
+  }
+}
+.index__CommandLine___16CHw {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+
+  -webkit-align-self: flex-end;
+
+      -ms-flex-item-align: end;
+
+          align-self: flex-end;
+}
+.index__Cursor___1T-Dy {
+  border-left: 1px solid;
+
+  -webkit-animation: index__blink___xEjVI 0.7s infinite;
+
+          animation: index__blink___xEjVI 0.7s infinite;
+  opacity: 1;
+}
+
+@-webkit-keyframes index__blink___xEjVI {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes index__blink___xEjVI {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.index__Command___1SySu a {
+  color: #1BACC1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.index__Command___1SySu a:hover {
+  background-color: #1BACC1;
+  color: white;
+  font-weight: bold;
+}

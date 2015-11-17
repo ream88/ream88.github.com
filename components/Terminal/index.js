@@ -1,8 +1,8 @@
-import styles from './index.css';
+import "./index.css";
 
-import React, { Component } from 'react';
-import CommandLine from '../CommandLine';
-import Command from '../Command';
+import React, { Component } from "react";
+import CommandLine from "../CommandLine";
+import Command from "../Command";
 
 
 export default class Terminal extends Component {
@@ -30,6 +30,6 @@ export default class Terminal extends Component {
 }
 
 
-if (typeof document !== 'undefined') {
+if (typeof document !== "undefined") {
   React.render(<Terminal />, document.body);
 }
