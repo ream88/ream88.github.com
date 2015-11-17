@@ -4,7 +4,7 @@
   "description": "Source of my site: http://mariouher.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "webpack -p; git commit -am \"🚀\"; git push"
   },
   "repository": {
     "type": "git",
