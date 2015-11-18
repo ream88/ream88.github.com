@@ -1,9 +1,7 @@
 import styles from "./index.css";
-import React, { Component } from "react";
+import React from "react";
 
 
-export default class Cursor extends Component {
-  render() {
-    return <span className={styles.Cursor}></span>;
-  }
-}
+export default () => (
+  <span className={styles.Cursor}></span>
+);
