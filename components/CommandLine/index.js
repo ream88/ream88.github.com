@@ -1,7 +1,6 @@
 import styles from "./index.css";
 
-import React, { PropTypes, Component } from "react";
-import cloneWithProps from "react-addons-clone-with-props";
+import React, { PropTypes, Component, cloneElement } from "react";
 import Cursor from "../Cursor";
 
 
@@ -54,7 +53,7 @@ export default class CommandLine extends Component {
 
   renderCommands() {
     return this.state.children.map((child) =>
-      cloneWithProps(child, { key: child.props.command, onComplete: this.next.bind(this) })
+      cloneElement(child, { key: child.props.command, onComplete: this.next.bind(this) })
     );
   }
 
@@ -65,7 +64,7 @@ export default class CommandLine extends Component {
 
     // Convert given [command, command] to [prompt, command, br, prompt, command, br, ...]
     const children = commands
-      .map((command, index) => [cloneWithProps(prompt, { key: `prompt-${index}` }), command, <br key={"br-" + index} />])
+      .map((command, index) => [cloneElement(prompt, { key: `prompt-${index}` }), command, <br key={"br-" + index} />])
       .reduce((a, b) => a.concat(b), []);
 
     return (

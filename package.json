@@ -43,7 +43,6 @@
     "ejs": "^2.3.4",
     "postcss-custom-media": "^5.0.0",
     "react": "^0.14.2",
-    "react-addons-clone-with-props": "^0.14.2",
     "react-dom": "^0.14.2"
   }
 }
