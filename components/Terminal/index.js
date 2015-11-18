@@ -1,6 +1,7 @@
 import "./index.css";
 
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import CommandLine from "../CommandLine";
 import Command from "../Command";
 
@@ -31,5 +32,5 @@ export default class Terminal extends Component {
 
 
 if (typeof document !== "undefined") {
-  React.render(<Terminal />, document.body);
+  ReactDOM.render(<Terminal />, document.body);
 }

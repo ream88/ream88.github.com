@@ -19,12 +19,12 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader") },
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel?stage=0&loose[]=es6.modules&loose[]=es6.classes" }
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel?presets[]=es2015&presets[]=stage-0&presets[]=react" }
     ]
   },
 
   postcss: [
-    require("autoprefixer-core"),
+    require("autoprefixer"),
     require("postcss-calc"),
     require("postcss-color-function"),
     require("postcss-custom-properties"),

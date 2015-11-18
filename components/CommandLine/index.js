@@ -1,8 +1,7 @@
 import styles from "./index.css";
 
 import React, { PropTypes, Component } from "react";
-import { addons } from "react/addons";
-const { cloneWithProps } = addons;
+import cloneWithProps from "react-addons-clone-with-props";
 import Cursor from "../Cursor";
 
 
