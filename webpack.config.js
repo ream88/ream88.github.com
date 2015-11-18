@@ -1,5 +1,6 @@
 /*eslint-env node*/
 
+var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var ReactToHtmlPlugin = require("react-to-html-webpack-plugin");
 
@@ -35,6 +36,9 @@ module.exports = {
     new ExtractTextPlugin("style.css", { allChunks: true }),
     new ReactToHtmlPlugin("index.html", "index.js", {
       template: ejs.compile(fs.readFileSync(__dirname + "/index.ejs", "utf-8"))
+    }),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": "'production'"
     })
   ]
 };

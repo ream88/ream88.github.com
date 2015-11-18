@@ -7,28 +7,22 @@ import Command from "../Command";
 
 
 const Terminal = () => (
-  <main>
-    <CommandLine prompt="~#">
-      <Command command="whoami">
-        Mario Uher
-      </Command>
-      <Command command="uptime">
-        up 27 years
-      </Command>
-      <Command command="cat more.txt">
-        <a href="https://twitter.com/ream88" target="_blank">Twitter</a>
-        <br />
-        <a href="https://github.com/haihappen" target="_blank">GitHub</a>
-        <br />
-        <a href="mailto:uher.mario@gmail.com">Email</a>
-      </Command>
-    </CommandLine>
-  </main>
+  <CommandLine prompt="~#">
+    <Command command="whoami">
+      Mario Uher
+    </Command>
+    <Command command="uptime">
+      up 27 years
+    </Command>
+    <Command command="cat more.txt">
+      up 27 years
+    </Command>
+  </CommandLine>
 );
 
 
 if (typeof document !== "undefined") {
-  ReactDOM.render(<Terminal />, document.body);
+  ReactDOM.render(<Terminal />, document.querySelector("main"));
 }
 
 

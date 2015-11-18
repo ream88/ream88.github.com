@@ -43,9 +43,8 @@ export default class CommandLine extends Component {
 
   renderPrompt() {
     return (
-      <span className={styles.Prompt}>
-        {this.props.prompt}
-        &nbsp;
+      <span className={styles.Prompt} key="prompt">
+        {this.props.prompt}&nbsp;
       </span>
     );
   }
@@ -53,7 +52,7 @@ export default class CommandLine extends Component {
 
   renderCommands() {
     return this.state.children.map((child) =>
-      cloneElement(child, { key: child.props.command, onComplete: this.next.bind(this) })
+      cloneElement(child, { key: child.props.command, onComplete: ::this.next })
     );
   }
 
@@ -64,13 +63,17 @@ export default class CommandLine extends Component {
 
     // Convert given [command, command] to [prompt, command, br, prompt, command, br, ...]
     const children = commands
-      .map((command, index) => [cloneElement(prompt, { key: `prompt-${index}` }), command, <br key={"br-" + index} />])
+      .map((command, index) => [
+        cloneElement(prompt, { key: `prompt-${index}` }),
+        command,
+        <br key={`br-${index}`} />
+      ])
       .reduce((a, b) => a.concat(b), []);
 
     return (
       <div className={styles.CommandLine}>
         {children}
-        {this.state.complete ? [prompt, <Cursor />] : null}
+        {this.state.complete ? [prompt, <Cursor key="cursor" />] : null}
       </div>
     );
   }
