@@ -9,7 +9,7 @@ var fs = require("fs");
 
 
 module.exports = {
-  entry: "./components/Terminal/index.js",
+  entry: "./components/App/index.js",
 
   output: {
     path: __dirname,

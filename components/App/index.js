@@ -6,7 +6,7 @@ import CommandLine from "../CommandLine";
 import Command from "../Command";
 
 
-const Terminal = () => (
+const App = () => (
   <CommandLine prompt="~#">
     <Command command="whoami">
       Mario Uher
@@ -22,9 +22,9 @@ const Terminal = () => (
 
 
 if (typeof document !== "undefined") {
-  ReactDOM.render(<Terminal />, document.querySelector("main"));
+  ReactDOM.render(<App />, document.querySelector("main"));
 }
 
 
 // Needed for react-to-html-webpack-plugin to work properly.
-export default Terminal;
+export default App;
