@@ -15,7 +15,11 @@ const App = () => (
       up 27 years
     </Command>
     <Command command="cat more.txt">
-      up 27 years
+      <a href="https://twitter.com/ream88" target="_blank">Twitter</a>
+      <br />
+      <a href="https://github.com/haihappen" target="_blank">GitHub</a>
+      <br />
+      <a href="mailto:uher.mario@gmail.com">Email</a>
     </Command>
   </CommandLine>
 );
