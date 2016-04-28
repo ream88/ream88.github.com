@@ -14,7 +14,7 @@ body:global {
   color: #f8f8f2;
   font-family: "Courier New", monospace;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 1.5em;
 }
 
 @media (--iphone) {
