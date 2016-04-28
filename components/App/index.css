@@ -1,13 +1,11 @@
 @custom-media --iphone (max-width: 736px);
 
-
 *:global {
   margin: 0;
   padding: 0;
 
   box-sizing: border-box;
 }
-
 
 body:global {
   margin: 0.5rem;
@@ -16,11 +14,10 @@ body:global {
   -webkit-font-smoothing: antialiased;
   background-color: color(black alpha(80%));
   color: white;
-  font-family: Menlo, monospace;
-  font-size: 8pt;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
   line-height: 1.5em;
 }
-
 
 @media (--iphone) {
   body:global {

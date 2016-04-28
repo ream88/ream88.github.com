@@ -1,7 +1,6 @@
 :root {
-  --turquoise: #1BACC1;
+  --turquoise: #1bacc1;
 }
-
 
 .Command a {
   color: var(--turquoise);
