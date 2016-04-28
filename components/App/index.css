@@ -10,17 +10,15 @@
 body:global {
   margin: 0.5rem;
 
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  background-color: color(black alpha(80%));
-  color: white;
+  background-color: #00303e;
+  color: #f8f8f2;
   font-family: "Courier New", monospace;
   font-size: 13px;
-  line-height: 1.5em;
+  line-height: 18px;
 }
 
 @media (--iphone) {
   body:global {
-    font-size: 20pt;
+    font-size: 24px;
   }
 }

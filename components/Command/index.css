@@ -1,15 +1,15 @@
 :root {
-  --turquoise: #1bacc1;
+  --pink: #ec007c;
 }
 
 .Command a {
-  color: var(--turquoise);
+  color: var(--pink);
   font-weight: bold;
   text-decoration: none;
 }
 
 .Command a:hover {
-  background-color: var(--turquoise);
+  background-color: var(--pink);
   color: white;
   font-weight: bold;
 }
