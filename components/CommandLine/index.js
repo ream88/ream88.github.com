@@ -2,13 +2,11 @@ import styles from "./index.css";
 import React, { PropTypes, Component, cloneElement } from "react";
 import Cursor from "../Cursor";
 
-
 export default class CommandLine extends Component {
   static propTypes = {
     children: PropTypes.arrayOf(PropTypes.element).isRequired,
     prompt:   PropTypes.string.isRequired
   }
-
 
   constructor(props) {
     super(props);
@@ -19,14 +17,12 @@ export default class CommandLine extends Component {
     };
   }
 
-
   componentDidMount() {
     this.next();
   }
 
-
   next() {
-    if(this.props.children.length > 0) {
+    if (this.props.children.length > 0) {
       this.setState({
         ...this.state,
         children: [...this.state.children, this.props.children.shift()]
@@ -39,7 +35,6 @@ export default class CommandLine extends Component {
     }
   }
 
-
   renderPrompt() {
     return (
       <span className={styles.Prompt} key="prompt">
@@ -48,13 +43,11 @@ export default class CommandLine extends Component {
     );
   }
 
-
   renderCommands() {
-    return this.state.children.map((child) =>
+    return this.state.children.map(child =>
       cloneElement(child, { key: child.props.command, onComplete: ::this.next })
     );
   }
-
 
   render() {
     const prompt = this.renderPrompt();

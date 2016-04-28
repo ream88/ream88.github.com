@@ -2,7 +2,6 @@ import styles from "./index.css";
 import React, { PropTypes, Component } from "react";
 import Cursor from "../Cursor";
 
-
 export default class Command extends Component {
   static propTypes = {
     children:   PropTypes.oneOfType([
@@ -14,7 +13,6 @@ export default class Command extends Component {
     onComplete: PropTypes.func
   }
 
-
   constructor(props) {
     super(props);
 
@@ -24,21 +22,18 @@ export default class Command extends Component {
     };
   }
 
-
   componentDidMount() {
     setTimeout(this.tick.bind(this), this.randomTimeout() + 1000);
   }
-
 
   randomTimeout() {
     return Math.round(Math.random() * (100 - 30));
   }
 
-
   tick() {
     this.setState({ ...this.state, command: this.props.command.slice(0, this.state.command.length + 1) });
 
-    if(this.props.command == this.state.command) {
+    if (this.props.command === this.state.command) {
       setTimeout(() => {
         this.setState({ ...this.state, complete: true });
         this.props.onComplete();
@@ -47,7 +42,6 @@ export default class Command extends Component {
       setTimeout(this.tick.bind(this), this.randomTimeout());
     }
   }
-
 
   render() {
     return (

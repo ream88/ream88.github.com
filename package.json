@@ -4,7 +4,8 @@
   "description": "Source of my site: http://mariouher.com",
   "main": "index.js",
   "scripts": {
-    "deploy": "webpack -p; git commit -am \"🚀\"; git push"
+    "deploy": "webpack -p; git commit -am \"🚀\"; git push",
+    "lint": "eslint --fix components/**/*.js index.js"
   },
   "repository": {
     "type": "git",

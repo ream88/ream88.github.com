@@ -3,7 +3,6 @@ import React from "react";
 import CommandLine from "../CommandLine";
 import Command from "../Command";
 
-
 const App = () => (
   <CommandLine prompt="~#">
     <Command command="whoami">
