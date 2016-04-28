@@ -2,19 +2,15 @@
 
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var ReactToHtmlPlugin = require("react-to-html-webpack-plugin");
-
-var ejs = require("ejs");
-var fs = require("fs");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 
 module.exports = {
-  entry: "./components/App/index.js",
+  entry: "./index.js",
 
   output: {
-    path: __dirname,
     filename: "index.js",
-    libraryTarget: "umd"
+    path: __dirname + "/public"
   },
 
   module: {
@@ -33,9 +29,10 @@ module.exports = {
   ],
 
   plugins: [
-    new ExtractTextPlugin("style.css", { allChunks: true }),
-    new ReactToHtmlPlugin("index.html", "index.js", {
-      template: ejs.compile(fs.readFileSync(__dirname + "/index.ejs", "utf-8"))
+    new ExtractTextPlugin("style.css"),
+    new HtmlWebpackPlugin({
+      template: "index.html",
+      xhtml: true
     }),
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": "'production'"

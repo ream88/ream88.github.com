@@ -1,7 +1,5 @@
 import "./index.css";
-
 import React from "react";
-import ReactDOM from "react-dom";
 import CommandLine from "../CommandLine";
 import Command from "../Command";
 
@@ -24,11 +22,4 @@ const App = () => (
   </CommandLine>
 );
 
-
-if (typeof document !== "undefined") {
-  ReactDOM.render(<App />, document.querySelector("main"));
-}
-
-
-// Needed for react-to-html-webpack-plugin to work properly.
 export default App;

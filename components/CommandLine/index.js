@@ -1,5 +1,4 @@
 import styles from "./index.css";
-
 import React, { PropTypes, Component, cloneElement } from "react";
 import Cursor from "../Cursor";
 

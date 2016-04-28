@@ -27,21 +27,19 @@
     "babel-preset-react": "^6.1.18",
     "babel-preset-stage-0": "^6.1.18",
     "css-loader": "^0.23.0",
-    "eslint": "^1.9.0",
     "eslint-plugin-react": "^3.9.0",
+    "eslint": "^1.9.0",
     "extract-text-webpack-plugin": "^0.9.1",
-    "node-libs-browser": "^0.5.3",
+    "html-webpack-plugin": "^2.16.0",
     "postcss-calc": "^5.0.0",
     "postcss-color-function": "^2.0.0",
+    "postcss-custom-media": "^5.0.0",
     "postcss-custom-properties": "^5.0.0",
     "postcss-loader": "^0.8.0",
-    "react-to-html-webpack-plugin": "^2.2.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.6"
   },
   "dependencies": {
-    "ejs": "^2.3.4",
-    "postcss-custom-media": "^5.0.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2"
   }
