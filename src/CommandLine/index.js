@@ -1,5 +1,6 @@
 import styles from './index.css'
-import React, { PropTypes, Component, cloneElement } from 'react'
+import PropTypes from 'prop-types'
+import React, { Component, cloneElement } from 'react'
 import Cursor from '../Cursor'
 
 class CommandLine extends Component {

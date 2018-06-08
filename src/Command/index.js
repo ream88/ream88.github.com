@@ -1,5 +1,6 @@
 import styles from './index.css'
-import React, { PropTypes, Component } from 'react'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 import Cursor from '../Cursor'
 
 class Command extends Component {
