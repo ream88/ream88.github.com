@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "deploy": "webpack -p; git commit -am \"🚀\"; git push",
-    "lint": "eslint --fix components/**/*.js index.js; stylelint components/**/*.css"
+    "lint": "eslint --fix components/**/*.js index.js; stylelint components/**/*.css",
+    "start": "webpack -p"
   },
   "repository": {
     "type": "git",

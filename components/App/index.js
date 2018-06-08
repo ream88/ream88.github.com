@@ -9,7 +9,7 @@ const App = () => (
       Mario Uher
     </Command>
     <Command command="uptime">
-      up 28 years
+      up 30 years
     </Command>
     <Command command="cat more.txt">
       <a href="https://twitter.com/ream88" target="_blank">Twitter</a>
