@@ -1,4 +1,3 @@
-import styles from './index.css'
 import PropTypes from 'prop-types'
 import React, { Component, cloneElement } from 'react'
 import Cursor from '../Cursor'
@@ -33,7 +32,7 @@ class CommandLine extends Component {
 
   renderPrompt () {
     return (
-      <span className={styles.Prompt} key='prompt'>
+      <span key='prompt'>
         {this.props.prompt}&nbsp;
       </span>
     )
@@ -57,7 +56,7 @@ class CommandLine extends Component {
       .reduce((a, b) => a.concat(b), [])
 
     return (
-      <div className={styles.CommandLine}>
+      <div>
         {children}
         {this.state.complete ? [prompt, <Cursor key='cursor' />] : null}
       </div>

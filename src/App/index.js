@@ -4,7 +4,7 @@ import CommandLine from '../CommandLine'
 import Command from '../Command'
 
 const App = () => (
-  <CommandLine prompt='~#'>
+  <CommandLine prompt='>'>
     <Command command='whoami'>
       Mario Uher
     </Command>

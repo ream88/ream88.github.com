@@ -18,7 +18,7 @@ class Command extends Component {
   }
 
   randomTimeout () {
-    return Math.round(Math.random() * (100 - 30))
+    return Math.round(Math.random() * 200)
   }
 
   tick () {
