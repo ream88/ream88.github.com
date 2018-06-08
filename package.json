@@ -6,7 +6,7 @@
   "scripts": {
     "deploy": "webpack -p; git commit -am \"🚀\"; git push",
     "lint": "standard --fix src/**/*.js _index.js webpack.config.js && stylelint --fix src/**/*.css",
-    "start": "webpack -p"
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,8 @@
     "stylelint": "^9.2.1",
     "stylelint-config-standard": "^18.2.0",
     "webpack": "^4.12.0",
-    "webpack-cli": "^3.0.3"
+    "webpack-cli": "^3.0.3",
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
     "react": "^16.4.0",
