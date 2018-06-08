@@ -9,6 +9,7 @@
 body {
   display: flex;
   align-items: center;
+  overflow: hidden;
   padding: 20vw;
   width: 100vw;
   height: 100vh;
