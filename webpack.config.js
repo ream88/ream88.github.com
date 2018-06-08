@@ -1,8 +1,8 @@
-const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  mode: 'production',
   entry: './_index.js',
 
   output: {
@@ -47,9 +47,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: '_index.html',
       xhtml: true
-    }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': "'production'"
     })
   ]
 }
