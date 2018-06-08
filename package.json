@@ -1,7 +1,7 @@
 {
-  "name": "haihappen.github.com",
-  "version": "2016.04.28",
-  "description": "Source of my site: http://mariouher.com",
+  "name": "ream88.github.com",
+  "version": "2018.06.08",
+  "description": "My site https://mariouher.com",
   "main": "index.js",
   "scripts": {
     "deploy": "webpack -p; git commit -am \"🚀\"; git push",
@@ -9,16 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/haihappen/haihappen.github.com.git"
+    "url": "https://github.com/ream88/ream88.github.com.git"
   },
-  "keywords": [],
   "author": "Mario Uher <uher.mario@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/haihappen/haihappen.github.com/issues"
-  },
   "private": true,
-  "homepage": "https://github.com/haihappen/haihappen.github.com",
   "devDependencies": {
     "autoprefixer": "^6.1.0",
     "babel-core": "^6.1.21",
