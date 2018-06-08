@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "webpack -p; git commit -am \"🚀\"; git push",
-    "lint": "standard --fix src/**/*.js _index.js webpack.config.js",
+    "lint": "standard --fix src/**/*.js _index.js webpack.config.js && stylelint --fix src/**/*.css",
     "start": "webpack -p"
   },
   "repository": {
@@ -32,7 +32,8 @@
     "postcss-loader": "^0.8.0",
     "standard": "^11.0.1",
     "style-loader": "^0.13.0",
-    "stylelint-config-standard": "^6.0.0",
+    "stylelint": "^9.2.1",
+    "stylelint-config-standard": "^18.2.0",
     "webpack": "^1.12.6"
   },
   "dependencies": {

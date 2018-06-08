@@ -1,6 +1,5 @@
 .Cursor {
   border-left: 1px solid;
-
   animation: blink 0.7s infinite;
   opacity: 1;
 }
