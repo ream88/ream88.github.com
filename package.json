@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "webpack -p; git commit -am \"🚀\"; git push",
-    "lint": "eslint --fix components/**/*.js index.js; stylelint components/**/*.css",
+    "lint": "standard --fix src/**/*.js _index.js webpack.config.js",
     "start": "webpack -p"
   },
   "repository": {
@@ -18,14 +18,11 @@
   "devDependencies": {
     "autoprefixer": "^6.1.0",
     "babel-core": "^6.1.21",
-    "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
     "babel-preset-stage-0": "^6.1.18",
     "css-loader": "^0.23.0",
-    "eslint": "^2.8.0",
-    "eslint-plugin-react": "^5.0.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.16.0",
     "postcss-calc": "^5.0.0",
@@ -33,6 +30,7 @@
     "postcss-custom-media": "^5.0.0",
     "postcss-custom-properties": "^5.0.0",
     "postcss-loader": "^0.8.0",
+    "standard": "^11.0.1",
     "style-loader": "^0.13.0",
     "stylelint-config-standard": "^6.0.0",
     "webpack": "^1.12.6"
