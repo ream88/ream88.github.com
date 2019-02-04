@@ -14,6 +14,8 @@ const App = () => (
     <Command command='cat more.txt'>
       <a href='https://twitter.com/ream88' target='_blank'>Twitter</a>
       <br />
+      <a href='https://www.facebook.com/ream88' target='_blank'>Facebook</a>
+      <br />
       <a href='https://github.com/ream88' target='_blank'>GitHub</a>
       <br />
       <a href='https://www.linkedin.com/in/ream88/' target='_blank'>LinkedIn</a>
