@@ -1,8 +1,7 @@
 {
-  "name": "ream88.github.com",
-  "version": "2018.06.08",
-  "description": "My site https://mariouher.com",
-  "main": "index.js",
+  "private": true,
+  "author": "Mario Uher <uher.mario@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "deploy": "webpack -p; git commit -am \"🚀\"; git push",
     "lint": "standard --fix src/**/*.js webpack.config.js && stylelint --fix src/**/*.css",
@@ -12,9 +11,6 @@
     "type": "git",
     "url": "https://github.com/ream88/ream88.github.com.git"
   },
-  "author": "Mario Uher <uher.mario@gmail.com>",
-  "license": "MIT",
-  "private": true,
   "devDependencies": {
     "autoprefixer": "^8.6.1",
     "babel-core": "^6.1.21",
