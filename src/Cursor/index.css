@@ -1,7 +1,7 @@
 .Cursor {
+  animation: blink 0.7s infinite;
   font-weight: bold;
   opacity: 1;
-  animation: blink 0.7s infinite;
 }
 
 @keyframes blink {

@@ -2,51 +2,51 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
   display: flex;
-  align-items: center;
   overflow: hidden;
-  padding: 20vw;
   width: 100vw;
   height: 100vh;
-  background-color: #0a0a0a;
-  color: rgba(248, 248, 242, 0.9);
-  font-size: 32px;
-  font-family: VT323, monospace;
-  line-height: 1.4;
+  align-items: center;
+  padding: 20vw;
   animation:
     text-shadow 1.6s infinite,
     glitch 5s infinite;
+  background-color: #0a0a0a;
+  color: rgba(248, 248, 242, 0.9);
+  font-family: VT323, monospace;
+  font-size: 32px;
+  line-height: 1.4;
 }
 
 /* flicker */
 body::after {
   position: absolute;
+  z-index: 2;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 2;
   display: block;
+  animation: flicker 0.15s infinite;
   background: rgba(18, 16, 16, 0.1);
   content: ' ';
   opacity: 0;
-  animation: flicker 0.15s infinite;
   pointer-events: none;
 }
 
 /* Scanlines */
 body::before {
   position: absolute;
+  z-index: 2;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 2;
   display: block;
   background:
     linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
