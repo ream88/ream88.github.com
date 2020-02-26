@@ -12,13 +12,13 @@ const App = () => (
       up 31 years
     </Command>
     <Command command='cat more.txt'>
-      <a href='https://twitter.com/ream88' target='_blank'>Twitter</a>
+      <a href='https://twitter.com/ream88' target='_blank' rel='noopener noreferrer'>Twitter</a>
       <br />
-      <a href='https://www.facebook.com/ream88' target='_blank'>Facebook</a>
+      <a href='https://www.facebook.com/ream88' target='_blank' rel='noopener noreferrer'>Facebook</a>
       <br />
-      <a href='https://github.com/ream88' target='_blank'>GitHub</a>
+      <a href='https://github.com/ream88' target='_blank' rel='noopener noreferrer'>GitHub</a>
       <br />
-      <a href='https://www.linkedin.com/in/ream88/' target='_blank'>LinkedIn</a>
+      <a href='https://www.linkedin.com/in/ream88/' target='_blank' rel='noopener noreferrer'>LinkedIn</a>
     </Command>
   </CommandLine>
 )
