@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "webpack -p; git commit -am \"🚀\"; git push",
-    "lint": "standard --fix src/**/*.js _index.js webpack.config.js && stylelint --fix src/**/*.css",
+    "lint": "standard --fix src/**/*.js webpack.config.js && stylelint --fix src/**/*.css",
     "start": "webpack-dev-server"
   },
   "repository": {

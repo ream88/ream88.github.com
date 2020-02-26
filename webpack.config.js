@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'production',
-  entry: './_index.js',
+  entry: './src/index.js',
 
   output: {
     filename: 'index.js',
@@ -45,7 +45,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({ filename: 'style.css' }),
     new HtmlWebpackPlugin({
-      template: '_index.html',
+      template: 'src/index.html',
       xhtml: true
     })
   ]
