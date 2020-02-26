@@ -15,7 +15,14 @@ module.exports = {
       { test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[name]__[local]___[hash:base64:5]'
+              }
+            }
+          },
           {
             loader: 'postcss-loader',
             options: {
@@ -35,7 +42,7 @@ module.exports = {
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: ['es2015', 'stage-0', 'react']
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }]
       }
