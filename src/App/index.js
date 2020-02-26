@@ -1,4 +1,6 @@
 import './index.css'
+import './flicker.css'
+
 import React from 'react'
 
 import Age from '../Age'
