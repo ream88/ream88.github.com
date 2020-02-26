@@ -1,7 +1,9 @@
 import './index.css'
 import React from 'react'
-import CommandLine from '../CommandLine'
+
+import Age from '../Age'
 import Command from '../Command'
+import CommandLine from '../CommandLine'
 
 const App = () => (
   <CommandLine prompt='>'>
@@ -9,7 +11,7 @@ const App = () => (
       Mario Uher
     </Command>
     <Command command='uptime'>
-      up 31 years
+      up <Age /> years
     </Command>
     <Command command='cat more.txt'>
       <a href='https://twitter.com/ream88' target='_blank' rel='noopener noreferrer'>Twitter</a>
