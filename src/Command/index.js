@@ -45,11 +45,7 @@ class Command extends Component {
 }
 
 Command.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-    PropTypes.string
-  ]),
+  children: PropTypes.node.isRequired,
   command: PropTypes.string.isRequired,
   onComplete: PropTypes.func
 }

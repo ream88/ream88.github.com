@@ -8,6 +8,7 @@ class CommandLine extends Component {
 
     this.state = {
       complete: false,
+      givenChildren: props.children,
       children: []
     }
   }
@@ -17,10 +18,13 @@ class CommandLine extends Component {
   }
 
   next () {
-    if (this.props.children.length > 0) {
+    if (this.state.givenChildren.length > 0) {
+      let child = this.state.givenChildren[0]
+
       this.setState({
         ...this.state,
-        children: [...this.state.children, this.props.children.shift()]
+        givenChildren: this.state.givenChildren.slice(1),
+        children: [...this.state.children, child]
       })
     } else {
       this.setState({
@@ -65,7 +69,7 @@ class CommandLine extends Component {
 }
 
 CommandLine.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  children: PropTypes.node.isRequired,
   prompt: PropTypes.string.isRequired
 }
 export default CommandLine
