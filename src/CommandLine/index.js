@@ -19,7 +19,7 @@ class CommandLine extends Component {
 
   next () {
     if (this.state.givenChildren.length > 0) {
-      let child = this.state.givenChildren[0]
+      const child = this.state.givenChildren[0]
 
       this.setState({
         ...this.state,
