@@ -8,7 +8,9 @@
   <!--INJECT_CSS_HERE-->
 </head>
 <body>
-  <main></main>
+  <div id="glitch-container">
+    <main></main>
+  </div>
   <script>
     // Random phosphor fadeout duration (250-1000ms) on link hover
     document.addEventListener('mouseover', function(e) {
@@ -17,6 +19,37 @@
         e.target.style.setProperty('--fadeout-duration', duration + 'ms');
       }
     });
+
+    // Random glitch effect with 4 directions
+    var glitchClasses = ['glitch-up', 'glitch-down', 'glitch-left', 'glitch-right'];
+    var glitchTarget = document.getElementById('glitch-container');
+
+    function doGlitch() {
+      var glitchClass = glitchClasses[Math.floor(Math.random() * 4)];
+      var intensity = 1.01 + Math.random() * 0.04;
+      var brightness = 1.05 + Math.random() * 0.2;
+
+      glitchTarget.style.setProperty('--glitch-intensity', intensity);
+      glitchTarget.style.setProperty('--glitch-brightness', brightness);
+      glitchTarget.classList.add(glitchClass);
+
+      setTimeout(function() {
+        glitchTarget.classList.remove(glitchClass);
+      }, 150);
+    }
+
+    function triggerGlitch() {
+      doGlitch();
+
+      // 25% chance of double-glitch
+      if (Math.random() < 0.25) {
+        setTimeout(doGlitch, 80 + Math.random() * 100);
+      }
+
+      setTimeout(triggerGlitch, 1000 + Math.random() * 2000);
+    }
+
+    setTimeout(triggerGlitch, 1000 + Math.random() * 2000);
   </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
