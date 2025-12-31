@@ -10,6 +10,15 @@
 <body>
   <main></main>
   <script>
+    // Random phosphor fadeout duration (250-1000ms) on link hover
+    document.addEventListener('mouseover', function(e) {
+      if (e.target.matches('.Command a')) {
+        var duration = 250 + Math.random() * 750;
+        e.target.style.setProperty('--fadeout-duration', duration + 'ms');
+      }
+    });
+  </script>
+  <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
