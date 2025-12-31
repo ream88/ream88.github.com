@@ -1,23 +1,22 @@
+import { execSync } from 'child_process'
 import { readFile, writeFile } from 'fs/promises'
 
-const result = await Bun.build({
-  entrypoints: ['src/index.js'],
-  minify: true
-})
+// Compile Elm
+execSync('elm make src/Main.elm --optimize --output=elm.js', { stdio: 'inherit' })
 
+// Read compiled Elm and CSS
+const elmJs = await readFile('elm.js', 'utf-8')
+const css = await readFile('src/styles.css', 'utf-8')
+
+// Build HTML
 let html = await readFile('src/index.html', 'utf-8')
-
-for (const output of result.outputs) {
-  let text = await output.text()
-  if (output.path.endsWith('.css')) {
-    // Use function to avoid $ replacement patterns
-    html = html.replace('<!--INJECT_CSS_HERE-->', () => `<style>${text}</style>`)
-  } else if (output.path.endsWith('.js')) {
-    // Escape script tags to prevent HTML parser issues
-    text = text.replaceAll('<script>', '<\\script>')
-    text = text.replaceAll('</script>', '<\\/script>')
-    html = html.replace('<!--INJECT_JS_HERE-->', () => `<script>${text}</script>`)
-  }
-}
+html = html.replace('<!--INJECT_CSS_HERE-->', () => `<style>${css}</style>`)
+html = html.replace('<!--INJECT_JS_HERE-->', () => `<script>${elmJs}</script>`)
 
 await writeFile('index.html', html)
+
+// Clean up
+import { unlink } from 'fs/promises'
+await unlink('elm.js')
+
+console.log('Build complete: index.html')

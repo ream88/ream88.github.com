@@ -6,22 +6,16 @@
   "scripts": {
     "build": "bun build.js",
     "deploy": "bun run build; git commit -am \"🚀\"; git push",
-    "lint": "standard --fix src/**/*.js build.js && stylelint --fix src/**/*.css"
+    "lint": "elm-format --validate src && stylelint --fix src/**/*.css"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ream88/ream88.github.com.git"
   },
   "devDependencies": {
-    "moment": "^2.29.4",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "standard": "^17.0.0",
+    "elm": "^0.19.1-6",
+    "elm-format": "^0.8.7",
     "stylelint": "^15.0.0",
     "stylelint-config-idiomatic-order": "^9.0.0"
-  },
-  "dependencies": {
-    "standardjs": "^1.0.0-alpha"
   }
 }
