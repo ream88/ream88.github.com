@@ -8,6 +8,12 @@
   text-decoration: none;
 }
 
+.Command a:visited {
+  color: #14fdce;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .Command a:hover {
   background-color: var(--green);
   color: #f8f8f2;

@@ -1,4 +1,4 @@
-import styles from './index.css'
+import './index.css'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Cursor from '../Cursor'
@@ -36,7 +36,7 @@ class Command extends Component {
 
   render () {
     return (
-      <span className={styles.Command}>
+      <span className='Command'>
         {this.state.command}
         {this.state.complete ? [<br key='br' />, this.props.children] : <Cursor />}
       </span>
