@@ -1,6 +1,7 @@
 module Main exposing (main)
 
 import Browser
+import Date
 import Html exposing (..)
 import Html.Attributes exposing (class, href, rel, target)
 import Process
@@ -45,7 +46,7 @@ type alias Model =
     , currentCommandIndex : Int
     , typedChars : Int
     , phase : Phase
-    , currentYear : Int
+    , age : Int
     }
 
 
@@ -55,7 +56,7 @@ commands =
       , output = \_ -> text "Mario Uher"
       }
     , { command = "uptime"
-      , output = \year -> text ("up " ++ String.fromInt (year - 1988) ++ " years")
+      , output = \age -> text ("up " ++ String.fromInt age ++ " years")
       }
     , { command = "cat more.txt"
       , output =
@@ -77,7 +78,7 @@ init _ =
       , currentCommandIndex = 0
       , typedChars = 0
       , phase = WaitingToStart
-      , currentYear = 2024
+      , age = 36
       }
     , Cmd.batch
         [ Task.perform GotTime Time.now
@@ -104,10 +105,16 @@ update msg model =
     case msg of
         GotTime posix ->
             let
-                year =
-                    Time.toYear Time.utc posix
+                birthday =
+                    Date.fromCalendarDate 1988 Time.Mar 5
+
+                today =
+                    Date.fromPosix Time.utc posix
+
+                age =
+                    Date.diff Date.Years birthday today
             in
-            ( { model | currentYear = year }, Cmd.none )
+            ( { model | age = age }, Cmd.none )
 
         StartTyping ->
             ( { model | phase = Typing }
@@ -188,16 +195,16 @@ viewCompletedCommands : Model -> List (Html Msg)
 viewCompletedCommands model =
     model.commands
         |> List.take model.currentCommandIndex
-        |> List.concatMap (viewCompletedCommand model.currentYear)
+        |> List.concatMap (viewCompletedCommand model.age)
 
 
 viewCompletedCommand : Int -> Command -> List (Html Msg)
-viewCompletedCommand year cmd =
+viewCompletedCommand age cmd =
     [ viewPrompt
     , span [ class "Command" ]
         [ text cmd.command
         , br [] []
-        , cmd.output year
+        , cmd.output age
         ]
     , br [] []
     ]
@@ -222,7 +229,7 @@ viewCurrentCommand model =
                 (if isComplete then
                     [ text cmd.command
                     , br [] []
-                    , cmd.output model.currentYear
+                    , cmd.output model.age
                     ]
 
                  else
