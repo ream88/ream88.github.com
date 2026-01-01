@@ -26,9 +26,11 @@ jobs:
 
       - run: bun run build
 
+      - run: mkdir -p _site && cp index.html CNAME LICENSE _site/
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
   deploy:
     needs: build
